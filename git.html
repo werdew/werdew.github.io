@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Git | werdew</title>
+	</head>
+	<body>
+		<h1>Git reference</h1>
+		Staging:
+		<pre><code>
+		git add -A           # stages all changes (equivalent: --all)
+		git add .            # stages all changes in current folder and subfolders.
+		git add example.txt  # stage file 'example.txt'
+		git add *            # stages all matching files (e.g. '*.txt') (no deletions, shell-expanded, may miss hidden)
+		</code></pre>
+
+		<pre><code>
+		git status
+		git reset
+		</code></pre>
+
+		Commit: confirming and saving changes permanently.
+		<pre><code>
+		git commit -m "comment"
+		git reset HEAD~
+		git rm
+		git reset
+		git reset --hard
+		git rm -f four.txt
+		git rm --cached four.txt
+		git rm -r myFolder
+		</code></pre>
+
+		View commits:
+		<pre><code>
+		git log
+		git log --oneline
+		</code></pre>
+
+		Branching:
+		<pre><code>
+		git branch
+		git branch development
+		git checkout development
+		git checkout main
+		git checkout development
+		git merge main -m "merging main to development"
+		git checkout main
+		git merge development -m "Merging on main with development"
+		</code></pre>
+
+		Merging:
+	
+		Conflict:
+		<pre><code>
+		git log --oneline
+		</code></pre>
+
+		Previous Version:
+		<pre><code>
+		git log --oneline
+		git checkout 4153dca #precious version
+		</code></pre>
+
+		Compare:
+		<pre><code>
+		git diff 'newest_id' 'oldest_id'
+		</code></pre>
+
+		Push: sending local changes to the remote
+		<pre><code>
+		git push origin main
+		git push origin staging
+		git push origin development
+		</code></pre>
+
+
+		Fetch: Bringing remote changes into your local repository, but not merging
+		<pre><code>
+		git fetch
+		git merge
+		</code></pre>
+
+		Pull: Fetching plus merging
+		<pre><code>
+		git pull
+		</code></pre>
+
+		Restore:
+		<pre><code>
+		git restore one.txt
+		git restore folder
+		git restore .
+		git restore --staged .    #restore staged
+		</code></pre>
+
+		Stash: for switching branches, stash your current branch
+		<pre><code>
+		git stash
+		git stash pop  #restores stash
+		git stash apply
+		git stash list
+		git stash pop stash@{0}
+		git stash apply stash@{0}
+		git stash drop
+		</code></pre>
+
+		Revert:
+		<pre><code>
+		git revert b80e820
+		</code></pre>
+
+		Reset:
+		
+		Rebase:
+		<pre><code>
+		git rebase main
+		</code></pre>
+
+		Pull Request: [PR]
+
+		Mac Setting:
+		<pre><code>
+		# Globally excluding .DS_Store file, which is used for mac UI
+		git config --global core.excludesfile ~/.gitignore_global
+		echo .DS_Store >> ~/.gitignore_global
+		</code></pre>
+	</body>
+<html>
