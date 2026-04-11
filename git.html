@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Git | werdew</title>
+		<meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Git Cheatsheet | werdew</title>
+                <meta name="description" content="Git Cheatsheet">
+                <meta name="author" content="werdew">
+		<link rel="stylesheet" href="main.css" type="text/css">
 	</head>
 	<body>
 		<h1>Git reference</h1>
-		Staging:
-		<pre><code>
-		git add -A           # stages all changes (equivalent: --all)
-		git add .            # stages all changes in current folder and subfolders.
-		git add example.txt  # stage file 'example.txt'
-		git add *            # stages all matching files (e.g. '*.txt') (no deletions, shell-expanded, may miss hidden)
-		</code></pre>
 
+		<h2>Staging:</h2>
+		<pre><code>
+		git add -A           # stage all changes (eq: --all)
+		git add .            # stage current dir and subdirs
+		git add file.txt     # stage file.txt
+		git add *.txt        # stages matching files
+		</code></pre>
+		
+		<h2>Status & Unstage</h2>
 		<pre><code>
 		git status
-		git reset
+		git reset	# unstage all
 		</code></pre>
 
-		Commit: confirming and saving changes permanently.
+		<h2>Commit</h2>
+		# Confirming and saving changes permanently.
 		<pre><code>
-		git commit -m "comment"
-		git reset HEAD~
+		git commit -m "message"
+		git commit --amend	#edit last commit
+		</code></pre>
+
+		<h2>Reset</h2>
+		<pre><code>
+		git reset HEAD~			# undo last commit (keep changes)
 		git rm
 		git reset
 		git reset --hard
@@ -30,13 +43,13 @@
 		git rm -r myFolder
 		</code></pre>
 
-		View commits:
+		<h2>View History</h2>
 		<pre><code>
 		git log
 		git log --oneline
 		</code></pre>
 
-		Branching:
+		<h2>Branching</h2>
 		<pre><code>
 		git branch
 		git branch development
@@ -48,44 +61,49 @@
 		git merge development -m "Merging on main with development"
 		</code></pre>
 
-		Merging:
-	
-		Conflict:
+		<h2>Merge</h2>
+		<pre><code>
+		git merge dev	# merge dev into current
+		</code></pre>
+
+		<h2>Conflict</h2>
 		<pre><code>
 		git log --oneline
 		</code></pre>
 
-		Previous Version:
+		<h2>Previous Version</h2>
 		<pre><code>
 		git log --oneline
-		git checkout 4153dca #precious version
+		git checkout commit-hash #previous version
 		</code></pre>
 
-		Compare:
+		<h2>Compare</h2>
 		<pre><code>
 		git diff 'newest_id' 'oldest_id'
 		</code></pre>
 
-		Push: sending local changes to the remote
+		<h2>Push</h2> 
+		Sending local changes to the remote.
 		<pre><code>
 		git push origin main
 		git push origin staging
 		git push origin development
 		</code></pre>
 
-
-		Fetch: Bringing remote changes into your local repository, but not merging
+		<h2>Fetch</h2> 
+		Bringing remote changes into your local repository, but not merging.
 		<pre><code>
 		git fetch
 		git merge
 		</code></pre>
 
-		Pull: Fetching plus merging
+		<h2>Pull</h2> 
+		Fetching plus merging.
 		<pre><code>
 		git pull
 		</code></pre>
 
-		Restore:
+		<h2>Restore</h2>
 		<pre><code>
 		git restore one.txt
 		git restore folder
@@ -93,7 +111,8 @@
 		git restore --staged .    #restore staged
 		</code></pre>
 
-		Stash: for switching branches, stash your current branch
+		<h2>Stash</h2> 
+		For switching branches, stash your current branch
 		<pre><code>
 		git stash
 		git stash pop  #restores stash
@@ -104,21 +123,17 @@
 		git stash drop
 		</code></pre>
 
-		Revert:
+		<h2>Revert</h2>
 		<pre><code>
-		git revert b80e820
+		git revert hash
 		</code></pre>
-
-		Reset:
 		
-		Rebase:
+		<h2>Rebase</h2>
 		<pre><code>
 		git rebase main
 		</code></pre>
 
-		Pull Request: [PR]
-
-		Mac Setting:
+		<h2>Mac / Global Ignore</h2>
 		<pre><code>
 		# Globally excluding .DS_Store file, which is used for mac UI
 		git config --global core.excludesfile ~/.gitignore_global
