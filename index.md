@@ -1,5 +1,6 @@
 ---
 title: Home | werdew
+layout: default
 nav_order: 1
 ---
 
@@ -10,7 +11,7 @@ Index:
 
 [Test Page Math](testpage_01.md)
 [Test Page Link](testpage_02.md)
-[Git Reference](git.html.md)
+[Git Reference](git.md)
 [HTML Reference](html.md)
 <!--
 <a href="vim.html">vim</a>
