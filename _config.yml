@@ -1,24 +1,16 @@
 title: "werdew's Reference"
-description: Personal wiki & reference site
+description: Personal page & reference site
 url: "https://werdew.github.io"
 
 # Theme settings
+theme: just-the-docs
+
 color_scheme: light
 
 # Search (Lunr.js – super fast)
 search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
 
-# Navigation & links
-nav_enabled: true
-aux_links:
-  "GitHub Repo":
-    - "https://github.com/werdew/werdew.github.io"
-aux_links_new_tab: true
-
-# GitHub edit button (super useful for wiki)
+# GitHub edit button
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/werdew/werdew.github.io"
@@ -26,4 +18,4 @@ gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
 # Footer
-footer_content: "© werdew – Personal Site /  Reference"
+footer_content: "© werdew – Personal Page / Reference"

@@ -4,17 +4,17 @@ layout: default
 nav_order: 1
 ---
 
-werdew's Reference Pages
-========================
+# werdew's Reference Pages
 
 Index:
 
-[Test Page Math](testpage_01.md)
-[Test Page Link](testpage_02.md)
-[Git Reference](git.md)
-[HTML Reference](html.md)
+- [Test Page Math](testpage_01.md)
+- [Test Page Link](testpage_02.md)
+- [Git Reference](git.md)
+- [HTML Reference](html.md)
+- [Markdown Reference](markdown.md)
+- [Vim Reference](vim.md)
 <!--
-<a href="vim.html">vim</a>
 <a href="pandas.html">pandas</a>
 <a href="data_types.html">data types</a>
 <a href="transformation.html">data transformation</a>
