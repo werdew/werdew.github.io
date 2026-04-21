@@ -1,6 +1,7 @@
 ---     
-title: Demo:math | werdew
-nav_order: 4
+title: Demo:math
+layout: default
+nav_order: 6
 ---
 # Math Demo
 

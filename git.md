@@ -1,5 +1,6 @@
 ---     
-title: Git Reference | werdew
+title: Git
+layout: default
 nav_order: 2
 ---
 

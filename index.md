@@ -1,5 +1,5 @@
 ---
-title: Home | werdew
+title: Home
 layout: default
 nav_order: 1
 ---

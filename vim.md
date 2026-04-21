@@ -1,3 +1,9 @@
+---
+title: Vim
+layout: default
+nav_order: 5
+---
+
 Normal mode:
 
 undo:u

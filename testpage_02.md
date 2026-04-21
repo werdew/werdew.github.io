@@ -1,6 +1,7 @@
 ---     
-title: Demo: Link | werdew
-nav_order: 5
+title: Demo: Link
+layout: default
+nav_order: 7
 ---
 
 

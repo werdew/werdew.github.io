@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-X8v4v7v3d8aR9p4l5e5z5p5" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-X8v4v7v3d8aR9p4l5e5z5p5" crossorigin="anonymous">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.katex-math').forEach(function(el) {
+      renderMathInElement(el, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  });
+</script>

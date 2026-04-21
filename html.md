@@ -1,5 +1,6 @@
 ---     
-title: HTML Reference | werdew
+title: HTML
+layout: default
 nav_order: 3
 ---
 
