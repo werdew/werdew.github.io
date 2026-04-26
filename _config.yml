@@ -10,6 +10,10 @@ color_scheme: light
 # Search (Lunr.js – super fast)
 search_enabled: true
 
+# Mermaid Diagrams
+mermaid:
+  version: "11.4.0"
+
 # GitHub edit button
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
