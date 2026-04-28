@@ -109,7 +109,7 @@ Non-semantic containers are fallback options:
 ```
 
 ## Links & Images
-The basic link element is `<a></a>, the `target="_blank"` opens the link in a new tab (user stays on page), the `rel="noopener"` blocks the new page from accessing, `noreferrer` hides the HTTP Referer header.
+The basic link element is `<a></a>`, the `target="_blank"` opens the link in a new tab (user stays on page), the `rel="noopener"` blocks the new page from accessing, `noreferrer` hides the HTTP Referer header.
 
 ```html
 <!-- Links -->
