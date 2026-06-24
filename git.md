@@ -6,6 +6,31 @@ nav_order: 2
 
 # Git reference
 
+
+## Git Command Overview
+
+| Category              | Command                              | Description        | done|
+|-----------------------|--------------------------------------|--------------------|------|
+| **Config**            | `git config --global`                | Configurtation     | |
+| **Repo**              | `git init`                           | New repo           | x|
+|                       | `git clone <url>`                    | Clone remote       | x|
+| **Stage**             | `git status`                         | Check status       | x|
+|                       | `git add <file>`                     | Stage changes      | x|
+| **Commit**            | `git commit -m "msg"`                | Commit             | x|
+| **History**           | `git log --oneline --graph`          | Log                | x|
+|                       | `git diff`                           | Unstaged changes   | x|
+| **Branch**            | `git branch <name>`                  | Create branch      | x|
+|                       | `git checkout <branch>` or `git switch <branch>` | Switch   | x|
+| **Merge/Rebase**      | `git merge <branch>`                 | Merge              | |
+|                       | `git rebase <branch>`                | Rebase             | |
+| **Remote**            | `git push origin <branch>`           | Push               | |
+|                       | `git pull`                           | Pull + merge       | |
+| **Undo**              | `git restore <file>`                 | Unstage/restore    | |
+|                       | `git reset --soft HEAD~1`            | Undo commit (keep changes) | |
+|                       | `git revert <hash>`                  | Safe undo commit   | |
+| **Stash**             | `git stash` / `git stash pop`        | Temporary save     | |
+
+
 Staging:
 ```bash
 git add -A           # stage all changes (eq: --all)
@@ -25,6 +50,7 @@ git reset	# unstage all
 ```bash
 git commit -m "message"
 git commit --amend	#edit last commit
+git commit -am
 ```
 
 ## Reset
