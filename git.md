@@ -31,7 +31,8 @@ nav_order: 2
 | **Stash**             | `git stash` / `git stash pop`        | Temporary save     | |
 
 
-Staging:
+
+## Staging
 ```bash
 git add -A           # stage all changes (eq: --all)
 git add .            # stage current dir and subdirs
@@ -159,4 +160,33 @@ git rebase main
 # Globally excluding .DS_Store file, which is used for mac UI
 git config --global core.excludesfile ~/.gitignore_global
 echo .DS_Store >> ~/.gitignore_global
+```
+
+## Initial setup
+```bash
+# configure git identity
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# create SSH key
+ssh-keygen -t ed25519 -C "you@example.com"
+
+# Start the SSH agent and add your key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# Copy public key
+cat ~/.ssh/id_ed25519.pub
+
+# Add to github -> Github:Settings:SSH and GPG keys:New SSH key:Paste key.
+
+# Test Connection
+ssh -T git@github.com
+
+# Clone repository
+git clone git@github.com:USERNAME/REPOSITORY.git
+
+# Checks
+git config --global --list
+git remote -v
 ```

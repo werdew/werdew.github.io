@@ -51,3 +51,11 @@ s → substitute
 pattern → what you match
 empty replacement (//) → deletes it
 g → all occurrences per line
+
+
+
+
+windows copy from terminal:
+```vim
+:'<,'>w !clip.exe
+```
