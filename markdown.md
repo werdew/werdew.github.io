@@ -17,7 +17,7 @@ Quick overview with Markdown syntax.
 | Category           | Element                 | Syntax                                            | 
 |--------------------|-------------------------|---------------------------------------------------|
 | **Layout**         | [Headings](#headings)   | # Heading 1<br>## Heading 2<br>### Heading 3 etc. |
-|                    | [Horizontal Rule](#lists)| \-\-\-                                           |
+|                    | Horizontal Rule         | \-\-\-                                            |
 |                    | Blank Spacer Row        | `&nbsp;`                                          |
 | **Text Style**     | *Italic*                | \*Italic\* or \_Italic\_                          |
 |                    | **Bold**                | \*\*Bold\*\* or \_\_Bold\_\_                      |
@@ -27,8 +27,8 @@ Quick overview with Markdown syntax.
 |                    | <mark>Highlight</mark>  | \<mark\>Highlight\</mark>                         | 
 | [**Lists**](#lists)| Unordered List          | \- Item                                           |
 |                    | Task Item               | \- [X] Item<br> \- [ ] Item                       |
-|                    | Orderered Lists         | 1. Item<br>2. Item                                |
-|                    | Table                   |                                                   |
+|                    | Ordered List            | 1. Item<br>2. Item                                |
+|                    | [Table](#tables)        | \| Col \| Col \|<br>\|\-\-\-\|\-\-\-\|<br>\| A \| B \| |
 |                    | Code Block              | \`\`\`language<br>code<br>\`\`\`                  |
 | **Links & Media**  | Link                    | \[title](https://example.com)                     |
 |                    | Link to Heading         | \[title](#heading)                                |
@@ -96,7 +96,7 @@ Full rendered examples of everything above.
 
 ### Footnotes
 
-```mardown
+```markdown
 Here's a footnote[^1] and an other one[^another].
 ```
 

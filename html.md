@@ -1,4 +1,4 @@
----     
+---
 title: HTML
 layout: default
 nav_order: 3
@@ -80,7 +80,7 @@ Non-semantic containers are fallback options:
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
-<h4>Heading 5</h4>
+<h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 
@@ -152,10 +152,10 @@ The basic link element is `<a></a>`, the `target="_blank"` opens the link in a n
     <input type="email" id="email" name="email">
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password>
+    <input type="password" id="password" name="password">
 
     <button type="submit">Submit</button>
 </form>
 ```
-The `action` and `submit` attributes tell the browser where and how to send the data.
+The `action` and `method` attributes tell the browser where and how to send the data.
 The attribute `required` makes the field mandatory to submit.

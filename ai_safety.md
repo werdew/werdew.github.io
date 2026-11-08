@@ -1,10 +1,10 @@
 ---
-title: AI Safety
+title: AI Literacy
 layout: default
 nav_order: 12
 ---
 
-# Nationale AI Cursus
+# AI Literacy: Nationale AI Cursus
 
 Notes from the Dutch national AI course: algorithms, public space, how smart AI really is, prompting, practical tips, society, law, and the future of work.
 

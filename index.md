@@ -6,23 +6,30 @@ nav_order: 1
 
 # werdew's Reference Pages
 
-Index:
+Personal cheatsheets and notes.
 
-- [Test Page Math](testpage_01.md)
-- [Test Page Link](testpage_02.md)
-- [Git Reference](git.md)
-- [HTML Reference](html.md)
-- [Markdown Reference](markdown.md)
-- [Vim Reference](vim.md)
+## Tech
+
+- [Git]({% link git.md %})
+- [HTML]({% link html.md %})
+- [Markdown]({% link markdown.md %})
+- [Vim]({% link vim.md %})
+- [Python]({% link python.md %})
+- [JSON]({% link json.md %})
+
+## Data
+
+- [K-means]({% link k-means.md %})
+
+## Skills
+
+- [Personal Leadership]({% link personal_leadership.md %})
+- [Presenting]({% link presenting.md %})
+- [AI Literacy]({% link ai_safety.md %})
+
 <!--
-<a href="pandas.html">pandas</a>
-<a href="data_types.html">data types</a>
-<a href="transformation.html">data transformation</a>
-<a href="data_quality.html">data quality assurance</a>
-<a href="graphing.html">matplotlib</a>
-<a href="reporting.html">automated reporting and dashboards</a>
-<a href="algorithms.html">algorithms</a>
-<a href="presenting.html">presenting data</a>
-<a href="puzzels.html">mathmatical_puzzles</a>
-<a href="investing.html">investing</a>
+Planned topics:
+pandas, data types, data transformation, data quality assurance, matplotlib,
+automated reporting and dashboards, algorithms, presenting data,
+mathematical puzzles, investing
 -->

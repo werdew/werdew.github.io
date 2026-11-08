@@ -1,5 +1,12 @@
+---
+title: K-means
+layout: default
+nav_order: 7
+---
+
 # K-means
 
+So far this page holds a hand-made rule-based classifier on the Iris dataset, as a baseline to compare k-means clustering against later.
 
 ```python
 from ucimlrepo import fetch_ucirepo
@@ -29,7 +36,7 @@ sns.pairplot(w, hue= 'class')
 plt.show()
 
 # Simple rules model:
-# if 8/3 petal width + petal_legth <= 4  -> iris-setosa
+# if 8/3 petal width + petal_length <= 4  -> iris-setosa
 # if 2 petal width + petal_length <= 8 -> iris-versicolor
 # else iris-virginica
 
@@ -65,8 +72,9 @@ def simple_rules(pw, pl):
     else:
         return "Iris-virginica"
 
-w["simple_rules"] = w.apply(lambda row: simple_rules(row["petal width"], row["petal length"\
-]), axis=1)
+w["simple_rules"] = w.apply(
+    lambda row: simple_rules(row["petal width"], row["petal length"]), axis=1
+)
 
 
 # Evaluation metrics:
@@ -85,7 +93,7 @@ print(cm)
 
 
 
-plt.scatter(X.["sepal width"], X["sepal length"])
+plt.scatter(X["sepal width"], X["sepal length"])
 plt.xlabel("sepal width")
 plt.ylabel("sepal length")
 plt.title("Sepal width/length Scatter Plot")

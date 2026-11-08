@@ -1,4 +1,4 @@
----     
+---
 title: Git
 layout: default
 nav_order: 2
@@ -9,28 +9,27 @@ nav_order: 2
 
 ## Git Command Overview
 
-| Category              | Command                              | Description        | done|
-|-----------------------|--------------------------------------|--------------------|------|
-| **Config**            | `git config --global`                | Configurtation     | |
-| **Repo**              | `git init`                           | New repo           | x|
-|                       | `git clone <url>`                    | Clone remote       | x|
-| **Stage**             | `git status`                         | Check status       | x|
-|                       | `git add <file>`                     | Stage changes      | x|
-| **Commit**            | `git commit -m "msg"`                | Commit             | x|
-| **History**           | `git log --oneline --graph`          | Log                | x|
-|                       | `git diff`                           | Unstaged changes   | x|
-| **Branch**            | `git branch <name>`                  | Create branch      | x|
-|                       | `git checkout <branch>` or `git switch <branch>` | Switch   | x|
-| **Merge/Rebase**      | `git merge <branch>`                 | Merge              | |
-|                       | `git rebase <branch>`                | Rebase             | |
-| **Remote**            | `git push origin <branch>`           | Push               | |
-|                       | `git pull`                           | Pull + merge       | |
-| **Undo**              | `git restore <file>`                 | Unstage/restore    | |
-|                       | `git reset --soft HEAD~1`            | Undo commit (keep changes) | |
-|                       | `git revert <hash>`                  | Safe undo commit   | |
-| **Stash**             | `git stash` / `git stash pop`        | Temporary save     | |
-
-
+| Category              | Command                              | Description        |
+|-----------------------|--------------------------------------|--------------------|
+| **Config**            | `git config --global`                | Configuration      |
+| **Repo**              | `git init`                           | New repo           |
+|                       | `git clone <url>`                    | Clone remote       |
+| **Stage**             | `git status`                         | Check status       |
+|                       | `git add <file>`                     | Stage changes      |
+| **Commit**            | `git commit -m "msg"`                | Commit             |
+| **History**           | `git log --oneline --graph`          | Log                |
+|                       | `git diff`                           | Unstaged changes   |
+| **Branch**            | `git branch <name>`                  | Create branch      |
+|                       | `git checkout <branch>` or `git switch <branch>` | Switch |
+| **Merge/Rebase**      | `git merge <branch>`                 | Merge              |
+|                       | `git rebase <branch>`                | Rebase             |
+| **Remote**            | `git push origin <branch>`           | Push               |
+|                       | `git pull`                           | Pull + merge       |
+| **Undo**              | `git restore <file>`                 | Discard changes    |
+|                       | `git restore --staged <file>`        | Unstage            |
+|                       | `git reset --soft HEAD~1`            | Undo commit (keep changes) |
+|                       | `git revert <hash>`                  | Safe undo commit   |
+| **Stash**             | `git stash` / `git stash pop`        | Temporary save     |
 
 ## Staging
 ```bash
@@ -47,11 +46,11 @@ git reset	# unstage all
 ```
 
 ## Commit
-# Confirming and saving changes permanently.
+Confirming and saving changes permanently.
 ```bash
 git commit -m "message"
-git commit --amend	#edit last commit
-git commit -am
+git commit --amend           # edit last commit
+git commit -am "message"     # stage all tracked files and commit
 ```
 
 ## Reset
@@ -89,8 +88,22 @@ git merge dev	# merge dev into current
 ```
 
 ## Conflict
+A conflict happens when both branches changed the same lines. Git stops the merge and marks the file:
+
+```text
+<<<<<<< HEAD
+your version (current branch)
+=======
+their version (branch being merged)
+>>>>>>> dev
+```
+
 ```bash
-git log --oneline
+git status                   # lists files with conflicts ("both modified")
+# edit each file: keep what you want, delete the <<<<<<< ======= >>>>>>> markers
+git add file.txt             # mark the conflict as resolved
+git commit                   # finish the merge
+git merge --abort            # or: give up and go back to before the merge
 ```
 
 ## Previous Version
